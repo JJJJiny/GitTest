@@ -1,4 +1,4 @@
-package kh.spring.project;
+package kh.spring.test;
 
 import java.text.DateFormat;
 import java.util.Date;
@@ -11,15 +11,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-
 @Controller
 public class HomeController {
-	
-	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
-	
-	@RequestMapping("home")
-	public String home(Locale locale, Model model) {
-		
+	@RequestMapping(value = "/home")
+	public String home() {
 		return "home";
 	}
 	
